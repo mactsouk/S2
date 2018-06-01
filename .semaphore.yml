@@ -1,0 +1,10 @@
+version: "v3.0"
+name: A Simple Go project
+semaphore_image: standard
+blocks:
+- build:
+      jobs:
+        - name: Execute hw.go
+          commands:
+            - echo $SEMAPHORE_PIPELINE_ID
+            - go run hw.go
