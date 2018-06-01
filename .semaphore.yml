@@ -7,4 +7,4 @@ blocks:
         - name: Execute hw.go
           commands:
             - echo $SEMAPHORE_PIPELINE_ID
-            - cat hw.go
+            - go run hw.go
