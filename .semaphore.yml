@@ -10,7 +10,7 @@ blocks:
             - checkout
             - echo $SEMAPHORE_PIPELINE_ID
             - echo $HOME
-            - cd goproject 
+            - cd S2
             - pwd
             - ls -al
             - cat hw.go
@@ -33,7 +33,7 @@ blocks:
         - name: Build hw.go 
           commands:
             - checkout
-            - cd goproject
+            - cd S2
             - go build hw.go
             - ls -l ./hw
             - file ./hw
