@@ -7,7 +7,7 @@ blocks:
       jobs:
         - name: Execute hw.go 
           commands:
-            - checkout
+        - checkout
             - echo $SEMAPHORE_PIPELINE_ID
             - echo $HOME
             - cd S2
