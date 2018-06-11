@@ -1,0 +1,47 @@
+version: "v3.0"
+name: YAML file example for Go project.
+semaphore_image: standard
+blocks:
+ - name: Inspect Linux environment
+   build:
+      jobs:
+        - name: Execute hw.go 
+          commands:
+            - checkout
+            - echo $SEMAPHORE_PIPELINE_ID
+            - echo $HOME
+            - cd goproject 
+            - pwd
+            - ls -al
+            - cat hw.go
+            - echo $SEMAPHORE_GIT_DIR
+            - echo $VAR1
+      prologue:
+          commands:
+            - echo Prologue command 1
+            - echo Prologue command 2
+            - echo $PI
+      env_vars:
+           - name: VAR1
+             value: Environment Variable 1
+           - name: PI
+             value: "3.14159"
+
+ - name: Build Go project
+   build:
+      jobs:
+        - name: Build hw.go 
+          commands:
+            - checkout
+            - cd goproject
+            - go build hw.go
+            - ls -l ./hw
+            - file ./hw
+            - ./hw
+        - name: PATH variable
+          commands:
+            - echo $PATH
+      epilogue:
+          commands:
+            - echo Epilogue command 1
+            - echo Epilogue command 2
