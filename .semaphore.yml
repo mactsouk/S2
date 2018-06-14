@@ -1,4 +1,4 @@
-version: "v3.0"
+version: "v1.0"
 name: YAML file example for Go project.
 semaphore_image: standard
 blocks:
