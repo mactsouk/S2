@@ -1,1 +1,1 @@
-# Sample S2 Go project
+# Sample Semaphore 2.0 Go project
