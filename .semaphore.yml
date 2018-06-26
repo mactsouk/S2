@@ -8,8 +8,8 @@ blocks:
         - name: Execute hw.go 
           commands:
             - checkout
-            - echo $SEMAPHORE_PIPELINE_ID
             - echo $HOME
+            - echo $SEMAPHORE_PIPELINE_ID
             - pwd
             - ls -al
             - cat hw.go
