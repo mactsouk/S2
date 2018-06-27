@@ -1,2 +1,0 @@
-# Change it!
-This is file b1.txt from branch b2
