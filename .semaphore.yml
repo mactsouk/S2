@@ -13,8 +13,8 @@ blocks:
             - pwd
             - ls -al
             - cat hw.go
-            - echo $SEMAPHORE_GIT_DIR
             - echo $VAR1
+            - echo $SEMAPHORE_GIT_DIR
       prologue:
           commands:
             - echo Prologue command 1
