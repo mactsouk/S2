@@ -7,7 +7,6 @@ blocks:
       jobs:
         - name: Execute hw.go 
           commands:
-            - checkout
             - echo $HOME
             - echo $SEMAPHORE_PIPELINE_ID
             - pwd
@@ -17,8 +16,7 @@ blocks:
             - echo $VAR1
       prologue:
           commands:
-            - echo Prologue command 1
-            - echo Prologue command 2
+            - checkout
             - echo $PI
       env_vars:
            - name: VAR1
