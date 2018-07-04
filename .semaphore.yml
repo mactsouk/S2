@@ -7,13 +7,13 @@ blocks:
       jobs:
         - name: Execute hw.go 
           commands:
-            - echo $SEMAPHORE_PIPELINE_ID
             - echo $HOME
             - pwd
             - ls -al
             - cat hw.go
             - echo $SEMAPHORE_GIT_DIR
             - echo $VAR1
+            - echo $SEMAPHORE_PIPELINE_ID
       prologue:
           commands:
             - checkout
