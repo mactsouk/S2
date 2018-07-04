@@ -12,8 +12,8 @@ blocks:
             - ls -al
             - cat hw.go
             - echo $SEMAPHORE_GIT_DIR
-            - echo $VAR1
             - echo $SEMAPHORE_PIPELINE_ID
+            - echo $VAR1
       prologue:
           commands:
             - checkout
