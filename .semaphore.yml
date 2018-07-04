@@ -7,8 +7,8 @@ blocks:
       jobs:
         - name: Execute hw.go 
           commands:
-            - echo $HOME
             - echo $SEMAPHORE_PIPELINE_ID
+            - echo $HOME
             - pwd
             - ls -al
             - cat hw.go
