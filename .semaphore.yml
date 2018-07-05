@@ -8,12 +8,12 @@ blocks:
         - name: Execute hw.go 
           commands:
             - echo $HOME
+            - echo $VAR1
             - pwd
             - ls -al
             - cat hw.go
             - echo $SEMAPHORE_GIT_DIR
             - echo $SEMAPHORE_PIPELINE_ID
-            - echo $VAR1
       prologue:
           commands:
             - checkout
