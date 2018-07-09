@@ -1,41 +1,44 @@
-
 version: "v1.0"
-name: My first pipeline
+name: YAML file example for Go project.
 semaphore_image: standard
 blocks:
-  - name: "Stage 1"
-    build:
+ - name: Inspect Linux environment
+   build:
+      jobs:
+        - name: Execute hw.go 
+          commands:
+            - echo $HOME
+            - pwd
+            - ls -al
+            - cat hw.go
+            - echo $SEMAPHORE_GIT_DIR
+            - echo $SEMAPHORE_PIPELINE_ID
+            - echo $VAR1
       prologue:
-        commands:
-          - checkout
-      epilogue:
-        commands:
-          - echo "Yay job finished"
-          - echo $SEMAPHORE_JOB_RESULT
+          commands:
+            - checkout
+            - echo $PI
       env_vars:
-        - name: VAR1
-          value: Environment Variable 1
-        - name: PI
-          value: "3.14159"
-      jobs:
-      - name: Just ls
-        commands:
-          - pwd
-          - echo "test"
-          - ls /etc
+           - name: VAR1
+             value: Environment Variable 1
+           - name: PI
+             value: "3.14159"
 
-      - name: List files
-        commands:
-          - echo "First env var -> $VAR1"
-          - echo "My files:"
-          - ls -lah
-
-  - name: "Stage 2"
-    build:
+ - name: Build Go project
+   build:
       jobs:
-      - name: Echo job
-        commands:
-          - checkout
-          - pwd
-          - echo $SEMAPHORE_PIPELINE_ID
-          - echo "Hello from $SEMAPHORE_JOB_ID"
+        - name: Build hw.go 
+          commands:
+            - checkout
+            - go build hw.go
+            - ls -l ./hw
+            - file ./hw
+            - ./hw
+        - name: PATH variable
+          commands:
+            - echo $PATH
+      epilogue:
+          commands:
+            - echo Epilogue command 1
+            - echo Epilogue command 2
+
