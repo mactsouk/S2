@@ -1,9 +1,9 @@
-version: "v1.0-beta-task"
+version: "v1.0"
 name: YAML file example for Go project.
 semaphore_image: standard
 blocks:
  - name: Inspect Linux environment
-   task:
+   build:
       jobs:
         - name: Execute hw.go 
           commands:
@@ -25,7 +25,7 @@ blocks:
              value: "3.14159"
 
  - name: Build Go project
-   task:
+   build:
       jobs:
         - name: Build hw.go 
           commands:
