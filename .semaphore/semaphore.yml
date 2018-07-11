@@ -1,6 +1,9 @@
 version: "v1.0-beta-task"
 name: YAML file example for Go project.
-semaphore_image: standard
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1404
 blocks:
  - name: Inspect Linux environment
    task:
