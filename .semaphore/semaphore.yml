@@ -33,8 +33,7 @@ blocks:
         - name: Build hw.go 
           commands:
             - checkout
-            - sudo apt-get install golang-go
-            - sudo apt-get install gccgo-go 
+            - change-go-version 1.9
             - go build hw.go
             - ls -l ./hw
             - file ./hw
