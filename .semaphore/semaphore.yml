@@ -33,6 +33,8 @@ blocks:
         - name: Build hw.go 
           commands:
             - checkout
+            - apt install golang-go
+            - apt install gccgo-go 
             - go build hw.go
             - ls -l ./hw
             - file ./hw
