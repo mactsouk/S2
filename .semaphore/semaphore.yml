@@ -10,6 +10,7 @@ blocks:
       jobs:
         - name: Execute hw.go 
           commands:
+            - uname -a
             - echo $HOME
             - echo $VAR1
             - pwd
