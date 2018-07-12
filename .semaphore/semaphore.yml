@@ -3,12 +3,12 @@ name: YAML file example for Go project.
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu1804-beta
+    os_image: ubuntu1804
 blocks:
  - name: Inspect Linux environment
    task:
       jobs:
-        - name: Execute hw.go 
+        - name: Display hw.go 
           commands:
             - uname -a
             - echo $HOME
