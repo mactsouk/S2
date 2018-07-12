@@ -36,6 +36,7 @@ blocks:
           commands:
             - checkout
             - sudo apt-get -y install golang-go
+           # - change-go-version 1.10
             - go build hw.go
             - ls -l ./hw
             - file ./hw
