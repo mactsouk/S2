@@ -21,6 +21,7 @@ blocks:
       prologue:
           commands:
             - checkout
+            - df -h
             - echo $PI
       env_vars:
            - name: VAR1
