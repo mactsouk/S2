@@ -34,7 +34,9 @@ blocks:
         - name: Build hw.go 
           commands:
             - checkout
-            - change-go-version 1.9
+            - sudo apt get update
+            - sudo apt get upgrade
+            - sudo apt install golang-go
             - go build hw.go
             - ls -l ./hw
             - file ./hw
