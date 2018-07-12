@@ -34,8 +34,8 @@ blocks:
         - name: Build hw.go 
           commands:
             - checkout
-            - sudo apt get update
-            - sudo apt get upgrade
+            - sudo apt-get update
+            - sudo apt-get upgrade
             - sudo apt install golang-go
             - go build hw.go
             - ls -l ./hw
