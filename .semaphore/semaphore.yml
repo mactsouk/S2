@@ -10,13 +10,13 @@ blocks:
       jobs:
         - name: Display hw.go 
           commands:
+            - echo $SEMAPHORE_GIT_DIR
             - uname -a
             - echo $HOME
             - echo $VAR1
             - pwd
             - ls -al
             - cat hw.go
-            - echo $SEMAPHORE_GIT_DIR
             - echo $SEMAPHORE_PIPELINE_ID
       prologue:
           commands:
