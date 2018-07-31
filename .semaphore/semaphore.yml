@@ -45,7 +45,6 @@ blocks:
             - echo $PATH
       epilogue:
           commands:
-            - doesNotExist
             - echo Epilogue command 1
             - echo Epilogue command 2
 
