@@ -55,6 +55,7 @@ blocks:
             type: e1-standard-2
             os_image: ubuntu1804
       jobs:
+        - name: Using agent job
           commands:
             - echo $PATH
 
