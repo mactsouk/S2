@@ -12,13 +12,13 @@ blocks:
           commands:
             - echo $SEMAPHORE_GIT_DIR
 
-- name: Agent in task
-  task:
-     agent:
-         machine:
-           type: e1-standard-2
-           os_image: ubuntu1804
-     jobs:
-       - name: Using agent job
-         commands:
-           - echo $PATH
+ - name: Agent in task
+   task:
+      agent:
+          machine:
+            type: e1-standard-2
+            os_image: ubuntu1804
+      jobs:
+        - name: Using agent job
+          commands:
+            - echo $PATH
