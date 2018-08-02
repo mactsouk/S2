@@ -48,3 +48,13 @@ blocks:
             - echo Epilogue command 1
             - echo Epilogue command 2
 
+ - Agent in task
+   task:
+     agent:
+       machine:
+         type: e1-standard-2
+         os_image: ubuntu1804
+      jobs:
+          commands:
+            - echo $PATH
+
