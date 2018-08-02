@@ -50,7 +50,7 @@ blocks:
 
  - name: Agent in task
    task:
-     agent:
+      agent:
        machine:
          type: e1-standard-2
          os_image: ubuntu1804
