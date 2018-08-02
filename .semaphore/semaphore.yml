@@ -1,5 +1,5 @@
 version: "v1.0"
-name: YAML file example for Go project.
+name: YAML file example with task and agent.
 agent:
   machine:
     type: e1-standard-2
@@ -8,54 +8,17 @@ blocks:
  - name: Inspect Linux environment
    task:
       jobs:
-        - name: Display hw.go 
+        - name: Learn about SEMAPHORE_GIT_DIR
           commands:
             - echo $SEMAPHORE_GIT_DIR
-            - uname -a
-            - echo $HOME
-            - echo $VAR1
-            - pwd
-            - ls -al
-            - cat hw.go
-            - echo $SEMAPHORE_PIPELINE_ID
-      prologue:
-          commands:
-            - checkout
-            - df -h
-            - echo $PI
-      env_vars:
-           - name: VAR1
-             value: Environment Variable 1
-           - name: PI
-             value: "3.14159"
 
- - name: Build Go project
-   task:
-      jobs:
-        - name: Build hw.go 
-          commands:
-            - checkout
-            - change-go-version 1.10
-            - go build hw.go
-            - ls -l ./hw
-            - file ./hw
-            - ./hw
-        - name: PATH variable
-          commands:
-            - echo $PATH
-      epilogue:
-          commands:
-            - echo Epilogue command 1
-            - echo Epilogue command 2
-
- - name: Agent in task
-   task:
-      agent:
-          machine:
-            type: e1-standard-2
-            os_image: ubuntu1804
-      jobs:
-        - name: Using agent job
-          commands:
-            - echo $PATH
-
+- name: Agent in task
+  task:
+     agent:
+         machine:
+           type: e1-standard-2
+           os_image: ubuntu1804
+     jobs:
+       - name: Using agent job
+         commands:
+           - echo $PATH
