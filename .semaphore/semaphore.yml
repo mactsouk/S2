@@ -15,7 +15,6 @@ blocks:
             - echo $HOME
             - echo $VAR1
             - pwd
-            - ls -al
             - cat hw.go
             - echo $SEMAPHORE_PIPELINE_ID
       prologue:
