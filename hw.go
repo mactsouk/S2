@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World!")
+	fmt.Printf("Hello World!\n")
 	fmt.Println("SEMAPHORE_PIPELINE_ID:", os.Getenv("SEMAPHORE_PIPELINE_ID"))
 }
 
