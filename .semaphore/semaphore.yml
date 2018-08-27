@@ -1,5 +1,5 @@
 version: v1.0
-name: YAML file example for Go project.
+name: A Go project
 agent:
   machine:
     type: e1-standard-2
